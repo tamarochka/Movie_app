@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-  validates :title, :year, presence: true
+  validates :title, presence: true
 
   def self.upload(file)
     spreadsheet = open_spreadsheet(file)
