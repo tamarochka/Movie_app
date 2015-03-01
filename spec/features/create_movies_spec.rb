@@ -11,7 +11,7 @@ feature 'user creates movies', %Q{
 
       attach_file "File", File.join(Rails.root, "spec/support/files/example.csv")
 
-      click_button 'Import'
+      click_button 'Upload'
 
       expect(page).to have_content("Movies successfully uploaded")
       expect(Movie.count).to eq(10)
@@ -20,7 +20,7 @@ feature 'user creates movies', %Q{
     scenario 'with no file' do
       visit movies_path
 
-      click_button 'Import'
+      click_button 'Upload'
 
       expect(page).to have_content('Please attach file')
       expect(Movie.count).to eq(0)

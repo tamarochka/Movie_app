@@ -2,8 +2,8 @@
   <h5>Import movie</h5>
 
   <%= form_tag upload_movies_path, multipart: true do %>
-  <%= label_tag :file%>
-  <%= file_field_tag :movie %>
+  <%= label_tag :file %>
+  <%= file_field_tag :file %>
 
   <%= submit_tag "Upload", class: "button tiny" %>
   <% end %>
