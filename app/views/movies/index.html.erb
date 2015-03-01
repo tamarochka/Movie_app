@@ -1,3 +1,23 @@
+<div class="row">
+  <% if @movies.empty? %>
+  <h4>No movies to display</h4>
+  <%else%>
+  <div class="large-6 columns">
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+  </tr>
+  <% @movies.each do |movie|%>
+  <tr>
+    <td><%= movie.title %></td>
+    <td><%= movie.year %></td>
+  <tr>
+    <%end%>
+</table>
+<%= paginate @movies%>
+</div>
+<%end%>
 <div class="large-6 columns">
   <h5>Import movie</h5>
 
@@ -7,4 +27,5 @@
 
   <%= submit_tag "Upload", class: "button tiny" %>
   <% end %>
+</div>
 </div>

@@ -52,3 +52,4 @@ gem 'devise'
 gem 'foundation-rails'
 gem "roo"
 gem "iconv"
+gem 'kaminari'

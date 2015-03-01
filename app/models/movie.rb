@@ -1,5 +1,6 @@
 class Movie < ActiveRecord::Base
   validates :title, presence: true
+  paginates_per 25
 
   def self.upload(file)
     spreadsheet = open_spreadsheet(file)
