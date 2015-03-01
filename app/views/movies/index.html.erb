@@ -1,0 +1,10 @@
+<div class="large-6 columns">
+  <h5>Import movie</h5>
+
+  <%= form_tag upload_movies_path, multipart: true do %>
+  <%= label_tag :file%>
+  <%= file_field_tag :movie %>
+
+  <%= submit_tag "Upload", class: "button tiny" %>
+  <% end %>
+</div>
