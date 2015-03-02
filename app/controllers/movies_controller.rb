@@ -7,7 +7,7 @@ class MoviesController < ApplicationController
     if params[:file].nil?
       flash[:notice] = "Please attach file"
     else
-      Movie.upload(params[:file])
+      Movie.delay.upload(params[:file].path)
       flash[:notice]= "Movies successfully uploaded"
     end
     redirect_to root_url

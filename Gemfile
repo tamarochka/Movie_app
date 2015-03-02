@@ -53,3 +53,4 @@ gem 'foundation-rails'
 gem "roo"
 gem "iconv"
 gem 'kaminari'
+gem 'delayed_job_active_record'

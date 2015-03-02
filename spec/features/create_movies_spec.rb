@@ -5,6 +5,7 @@ feature 'user creates movies', %Q{
   I want to upload movies file
   So i can save and view them
   } do
+    Delayed::Worker.delay_jobs = false
     scenario 'valid data' do
 
       visit movies_path
