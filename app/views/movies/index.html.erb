@@ -7,11 +7,13 @@
   <tr>
     <th>Title</th>
     <th>Year</th>
+    <th>Rating</th>
   </tr>
   <% @movies.each do |movie|%>
   <tr>
     <td><%= movie.title %></td>
     <td><%= movie.year %></td>
+    <td><%= movie.rating %></td>
   <tr>
     <%end%>
 </table>

@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all.page(params[:page])
+    @movies = Movie.order('rating DESC').page(params[:page])
   end
 
   def upload
