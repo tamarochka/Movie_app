@@ -14,7 +14,7 @@ feature 'user creates movies', %Q{
 
       click_button 'Upload'
 
-      expect(page).to have_content("Movies successfully uploaded")
+      expect(page).to have_content("Importing movies")
       expect(Movie.count).to eq(10)
     end
 

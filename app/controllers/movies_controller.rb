@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
       flash[:notice] = "Please attach file"
     else
       Movie.delay.upload(params[:file].path)
-      flash[:notice]= "Movies successfully uploaded"
+      flash[:notice]= "Importing movies"
     end
     redirect_to root_url
   end
